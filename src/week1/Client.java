@@ -11,12 +11,12 @@ public class Client {
         double presentLevel;
         Scanner sc = new Scanner(System.in);
         presentLevel = sc.nextDouble();
-        WaterMotorAutomation wMA = new WaterMotor(topLevel);
-        wMA.automateWaterMotor(presentLevel);
+        Automation wMA = new WaterMotorAutomation(topLevel,presentLevel);
+        wMA.automate();
         List<String> electricAppliances = new ArrayList<>();
         electricAppliances.addAll(Arrays.asList("Fans","AC's","Lights"));
-        ElectricAppliancesAutomation eAA = new ElectricalAppliances(electricAppliances);
         boolean sensorMsg = false;
-        eAA.automateElectricAppliances(sensorMsg);
+        Automation eAA = new ElectricalAppliancesAutomation(electricAppliances,sensorMsg);
+        eAA.automate();
     }
 }
