@@ -13,7 +13,7 @@ public class User {
         for(int i=0;i<advertisements.size();i++){
             System.out.println(advertisements.get(i));
         }
-        Adds fsa = new FlagSuspiciousAdds(advertisements);
-        fsa.adds();
+        Ads fsa = new FlagSuspiciousAds(advertisements);
+        fsa.ads();
     }
 }
