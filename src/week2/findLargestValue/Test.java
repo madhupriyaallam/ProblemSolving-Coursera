@@ -3,9 +3,9 @@ package week2.findLargestValue;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Test1 implements HighestScore {
+public class Test implements HighestScore {
     List<Integer> marks = new ArrayList<>();
-    Test1(List<Integer> list){
+    Test(List<Integer> list){
         this.marks = list;
     }
     @Override
