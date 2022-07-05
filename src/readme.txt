@@ -1,1 +1,1 @@
-Problem-solving using Computational thinking(Michigan)
+Problem-Solving Bootcamp
