@@ -2,7 +2,6 @@ package week2.greedy;
 import java.util.Scanner;
 
 //You have a long flowerbed in which some plots are planted, and some are not. However, flowers cannot be planted in adjacent plots
-
 public class FlowerBed {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
