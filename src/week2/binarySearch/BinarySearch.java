@@ -11,12 +11,16 @@ public class BinarySearch {
         while(l <= r) {
             mid = (l + r) / 2;
             int square = mid * mid;
-            if (square == n) {
+            if (square == n)
+            {
                 return mid;
             }
-            if (square < n) {
+            if (square < n)
+            {
                 l = mid + 1;
-            } else {
+            }
+            else
+            {
                 r = mid - 1;
             }
         }
