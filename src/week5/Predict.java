@@ -3,7 +3,7 @@ import java.util.Map;
 import java.util.Scanner;
 
 public class Predict extends Data{
-    Data data;
+    private Data data;
     double currentIntensityOfRain;
     boolean likelyToOccur = true;
     Predict(Data data, double currentIntensityOfRain){

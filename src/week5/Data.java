@@ -4,7 +4,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class Data {
-    Location location;
+    private Location location;
     Map<String, Double> intensityOfRainInMonths = new HashMap<>();
     Data(){
         //System.out.println("Hello in data");

@@ -29,6 +29,10 @@ public class Floods {
         Actions actions = new Actions(predict, listOfActions);
         System.out.println("The type of region in which the place is located is "+predict.typeOfRegion());
         System.out.println("The Actions to be taken in "+predict.typeOfRegion()+" are :");
-        actions.actionsToBeTaken();
+        int num = 0;
+        if(predict.typeOfRegion() == "Coastal") num = 1;
+        else if (predict.typeOfRegion() == "City") num = 2;
+        else if (predict.typeOfRegion() == "Village") num = 3;
+        actions.actionsToBeTaken(num);
     }
 }
