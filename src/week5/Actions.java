@@ -3,13 +3,16 @@ package week5;
 public class Actions extends Predict{
     private Predict predict;
     private ListOfActions listOfActions;
+    public static final String COASTAL = "Coastal";
+    public static final String CITY = "City";
+    public static final String VILLAGE = "Village";
     Actions(Predict predict, ListOfActions listOfActions){
         super();
         this.predict = predict;
         this.listOfActions = listOfActions;
     }
-    void forCoastal() {
-        if (predict.typeOfRegion() == "Coastal") {
+        void actionsToBeTakenInCoastalRegion() {
+        if (predict.typeOfRegion() == COASTAL) {
             for (String actionCommonToAllRegionType : listOfActions.actionsCommonToAllRegionTypes) {
                 System.out.println(actionCommonToAllRegionType);
             }
@@ -19,8 +22,8 @@ public class Actions extends Predict{
             }
         }
     }
-    void forCity() {
-        if (predict.typeOfRegion() == "City") {
+    void actionsToBeTakenInCities() {
+        if (predict.typeOfRegion() == CITY) {
             for (String actionCommonToAllRegionType : listOfActions.actionsCommonToAllRegionTypes) {
                 System.out.println(actionCommonToAllRegionType);
             }
@@ -30,8 +33,8 @@ public class Actions extends Predict{
             }
         }
     }
-    void forVillage() {
-        if (predict.typeOfRegion() == "Village") {
+    void actionsToBeTakenInVillages() {
+        if (predict.typeOfRegion() == VILLAGE) {
             for (String actionCommonToAllRegionType : listOfActions.actionsCommonToAllRegionTypes) {
                 System.out.println(actionCommonToAllRegionType);
             }
@@ -41,15 +44,16 @@ public class Actions extends Predict{
             }
         }
     }
-    void actionsToBeTaken(int num){
+    void actionsToBeTaken(){
         boolean flag = predict.willOccur();
+        String region = predict.typeOfRegion();
         if(flag) {
-            switch (num){
-                case 1: forCoastal();
+            switch (region){
+                case COASTAL: actionsToBeTakenInCoastalRegion();
                         break;
-                case 2: forCity();
+                case CITY: actionsToBeTakenInCities();
                         break;
-                case 3: forVillage();
+                case VILLAGE: actionsToBeTakenInVillages();
                         break;
                 default: System.out.println("Please provide valid region");
             }
