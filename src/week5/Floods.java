@@ -25,9 +25,10 @@ public class Floods {
         System.out.println("Will floods occur? "+predict.willOccur());
         System.out.println();
 
-        Actions actions = new Actions(predict);
+        ListOfActions listOfActions = new ListOfActions();
+        Actions actions = new Actions(predict, listOfActions);
         System.out.println("The type of region in which the place is located is "+predict.typeOfRegion());
-        System.out.println("The Actions to be taken are :");
+        System.out.println("The Actions to be taken in "+predict.typeOfRegion()+" are :");
         actions.actionsToBeTaken();
     }
 }

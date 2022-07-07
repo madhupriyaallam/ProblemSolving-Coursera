@@ -13,14 +13,10 @@ public class Predict extends Data{
         this.intensityOfRainInMonths = data.intensityOfRainInMonths;
         //System.out.println("Hello in predict");
     }
-
     public Predict(){}
-
     String typeOfRegion(){
         return data.getLocation().typeOfRegion;
     }
-
-    //Map<String, Double> intensityOfRainInMonths = data.getIntensityOfRainInMonths();
     double averageIntensityOfRain(){
         double avgIntensityOfRain = 0;
 //        System.out.println("In avg intensity");
