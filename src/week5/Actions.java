@@ -11,7 +11,7 @@ public class Actions extends Predict{
         this.predict = predict;
         this.listOfActions = listOfActions;
     }
-        void actionsToBeTakenInCoastalRegion() {
+    void actionsToBeTakenInCoastalRegion() {
         if (predict.typeOfRegion() == COASTAL) {
             for (String actionCommonToAllRegionType : listOfActions.actionsCommonToAllRegionTypes) {
                 System.out.println(actionCommonToAllRegionType);
