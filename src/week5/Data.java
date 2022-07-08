@@ -20,7 +20,6 @@ public class Data {
     public Map<String, Double> getIntensityOfRainInMonths() {
         return intensityOfRainInMonths;
     }
-
     public Location getLocation() {
         return location;
     }
